@@ -1,4 +1,4 @@
-name = "tvbox-source-aggregator"
+name = "tvbox-source"
 main = "src/cf-entry.ts"
 compatibility_date = "2024-12-30"
 compatibility_flags = ["nodejs_compat"]
@@ -10,7 +10,7 @@ compatibility_flags = ["nodejs_compat"]
 # ]
 
 [triggers]
-crons = ["0 * * * *"]  # 每小时触发，实际执行频率由 Admin 设置的聚合间隔控制
+crons = ["0 14 * * *"]  # 每小时触发，实际执行频率由 Admin 设置的聚合间隔控制
 
 [[kv_namespaces]]
 binding = "KV"
